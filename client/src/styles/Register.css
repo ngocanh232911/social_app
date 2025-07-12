@@ -1,0 +1,48 @@
+@import "./colors.css";
+@import "./animations.css";
+
+.register-container {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.register-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.register-form input:focus {
+  border-color: var(--primary-color);
+}
+
+.register-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #ff6b9c;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}

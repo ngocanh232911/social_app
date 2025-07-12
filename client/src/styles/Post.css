@@ -1,0 +1,261 @@
+/* Post card */
+.post-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+/* Post header */
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Avatar */
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff5a71;
+  transition: transform 0.3s ease;
+}
+
+.post-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Author name */
+.post-author {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ff5a71;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Follow button */
+.follow-btn {
+  margin-left: auto;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff5a71;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.follow-btn:hover:not(:disabled) {
+  background-color: #ff364d;
+  transform: scale(1.05);
+}
+
+.follow-btn.following {
+  background-color: #aaa;
+  cursor: default;
+}
+
+.follow-btn.following:hover {
+  background-color: #888;
+  transform: none;
+}
+
+/* Post text */
+.post-text {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+  user-select: text;
+}
+
+/* Post media (image/video) */
+.post-media {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  transition: transform 0.3s ease;
+}
+
+.post-media:hover {
+  transform: scale(1.03);
+}
+
+/* Post actions */
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Like button */
+.like-btn, .liked-btn {
+  background-color: #ff5a71;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.like-btn:hover {
+  background-color: #ff364d;
+  transform: scale(1.1);
+}
+
+.liked-btn {
+  background-color: #e0245e;
+}
+
+.liked-btn:hover {
+  background-color: #b71c3a;
+  transform: scale(1.1);
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #ccc;
+  border: none;
+  color: #444;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background-color: #999;
+}
+
+/* Comments section */
+.comments-section {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.5rem;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.comment-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  gap: 0.5rem;
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #ff5a71;
+}
+
+.comment-content {
+  background-color: #f4f4f8;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  flex-grow: 1;
+  user-select: text;
+}
+
+.comment-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #cc0000;
+  font-size: 1.1rem;
+  padding: 0;
+  user-select: none;
+  transition: transform 0.2s;
+}
+
+.comment-delete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Comment form */
+.comment-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.comment-form input {
+  flex-grow: 1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.comment-form input:focus {
+  outline: none;
+  border-color: #ff5a71;
+}
+
+.comment-form button {
+  background-color: #ff5a71;
+  border: none;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.comment-form button:hover:not(:disabled) {
+  background-color: #ff364d;
+}
+
+.comment-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Animation fade-in-up (nếu chưa có) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.4s ease forwards;
+}

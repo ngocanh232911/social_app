@@ -1,0 +1,55 @@
+@import "./colors.css";
+@import "./animations.css";
+
+.login-container {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.login-form input:focus {
+  border-color: var(--primary-color);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #ff6b9c;
+}
+
+.login-error {
+  color: crimson;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}

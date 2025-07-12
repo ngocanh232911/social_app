@@ -1,0 +1,39 @@
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-btn,
+.cancel-btn,
+.edit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-btn:hover,
+.cancel-btn:hover,
+.edit-btn:hover {
+  background-color: #ff6b9c;
+}
