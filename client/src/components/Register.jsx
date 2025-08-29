@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";  // ✅ thêm Link để điều hướng
 import "../styles/Register.css";
 
 const Register = () => {
@@ -11,29 +12,27 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    const response = await fetch("/api/auth/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
+      const response = await fetch("http://localhost:3000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (response.ok) {
-      alert("Create account successfully! 🎉");
-      window.location.href = "/login";
-      setForm({ name: "", email: "", password: "" });
-    } else {
-      alert(`Error: ${data.message || "Please try again."}`);
+      if (response.ok) {
+        alert("Create account successfully! 🎉");
+        window.location.href = "/login";
+        setForm({ name: "", email: "", password: "" });
+      } else {
+        alert(`Error: ${data.message || "Please try again."}`);
+      }
+    } catch (error) {
+      console.error("Error: ", error);
+      alert("Error. Please try again.");
     }
-  } catch (error) {
-    console.error("Error: ", error);
-    alert("Error. Please try again.");
-  }
-
-
   };
 
   return (
@@ -68,6 +67,11 @@ const Register = () => {
           🌸 Create account
         </button>
       </form>
+
+      <p className="redirect-text">
+        Already have an account?{" "}
+        <Link to="/login" className="login-link">Login</Link>
+      </p>
     </div>
   );
 };

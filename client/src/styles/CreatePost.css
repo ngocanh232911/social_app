@@ -1,15 +1,32 @@
 @import "./colors.css";
 @import "./animations.css";
 
+/* Container full page */
+.create-post-container {
+  background-color: var(--bg-color);
+  width: 100%;
+  min-height: 100vh;      /* full height */
+  padding: 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* xếp dọc */
+  justify-content: center; /* canh giữa dọc */
+  align-items: center;     /* canh giữa ngang */
+  box-sizing: border-box;
+}
+
+/* Form card */
 .create-post-form {
+  width: 100%;
   max-width: 700px;
-  margin: 2rem auto;
   background-color: var(--bg-color);
   padding: 1rem 1.5rem;
   border-radius: 16px;
   box-shadow: var(--shadow);
+  box-sizing: border-box;
 }
 
+/* Textarea */
 .create-post-form textarea {
   width: 100%;
   padding: 1rem;
@@ -26,6 +43,7 @@
   border-color: var(--primary-color);
 }
 
+/* Input group */
 .input-group {
   display: flex;
   gap: 1rem;
@@ -34,6 +52,7 @@
   flex-wrap: wrap;
 }
 
+/* File label button */
 .file-label {
   background-color: var(--primary-color);
   color: white;
@@ -54,6 +73,7 @@
   display: none;
 }
 
+/* Text input */
 .input-group input[type="text"] {
   flex-grow: 1;
   padding: 0.5rem 1rem;
@@ -67,6 +87,7 @@
   border-color: var(--primary-color);
 }
 
+/* Preview */
 .preview-container {
   margin-bottom: 1rem;
   text-align: center;
@@ -78,6 +99,7 @@
   border-radius: 12px;
 }
 
+/* Error */
 .error-message {
   color: crimson;
   font-weight: bold;
@@ -85,6 +107,7 @@
   text-align: center;
 }
 
+/* Submit button */
 .submit-btn {
   width: 100%;
   background-color: var(--primary-color);
@@ -99,4 +122,26 @@
 
 .submit-btn:hover {
   background-color: #ff6b9c;
+}
+
+/* Responsive nhỏ */
+@media (max-width: 768px) {
+  .create-post-container {
+    padding: 1rem;
+  }
+
+  .create-post-form {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .file-label {
+    width: 100%;
+    text-align: center;
+  }
 }

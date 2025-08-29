@@ -26,7 +26,7 @@ const currentUserId = user ? JSON.parse(user).id : null;
     const data = await res.json();
 
     if (res.ok) {
-      setPosts(data.posts); // Lấy mảng posts bên trong object trả về
+      setPosts(data.posts); 
     } else {
       console.error("Lấy bài viết thất bại:", data.msg || data.message || "Không xác định");
       setPosts([]);

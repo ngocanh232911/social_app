@@ -73,3 +73,31 @@
     max-width: 100%;
   }
 }
+/* Phần link login dưới form */
+.redirect-text {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-color, #fff); /* fallback màu trắng nếu biến không có */
+  font-size: 1rem;
+}
+
+/* Link login */
+.login-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #ff6b9c; /* đổi màu khi hover */
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .redirect-text {
+    font-size: 0.9rem;
+  }
+}
