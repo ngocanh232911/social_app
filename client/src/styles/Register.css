@@ -1,15 +1,29 @@
 @import "./colors.css";
 @import "./animations.css";
 
+/* Container full page */
 .register-container {
   background-color: var(--bg-color);
+  width: 100%;           /* full width */
+  height: 100vh;         /* full height */
   padding: 2rem;
-  max-width: 400px;
-  margin: 2rem auto;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
+  margin: 0;             /* bỏ margin auto */
+  border-radius: 0;      /* không bo góc */
+  box-shadow: none;      /* bỏ shadow */
+  display: flex;
+  flex-direction: column; /* xếp dọc */
+  justify-content: center; /* canh giữa dọc */
+  align-items: center;    /* canh giữa ngang */
+  box-sizing: border-box;
 }
 
+/* Form */
+.register-form {
+  width: 100%;
+  max-width: 600px; /* nếu muốn giới hạn input/button không quá rộng */
+}
+
+/* Input full width */
 .register-form input {
   width: 100%;
   padding: 0.8rem;
@@ -24,6 +38,7 @@
   border-color: var(--primary-color);
 }
 
+/* Button full width */
 .register-btn {
   width: 100%;
   padding: 0.8rem;
@@ -40,9 +55,21 @@
   background-color: #ff6b9c;
 }
 
+/* Title */
 .title {
   text-align: center;
   margin-bottom: 1rem;
   color: var(--primary-color);
   font-size: 1.6rem;
+}
+
+/* Responsive nhỏ */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 1rem;
+  }
+  
+  .register-form {
+    max-width: 100%;
+  }
 }

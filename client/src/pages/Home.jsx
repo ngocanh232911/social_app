@@ -54,19 +54,19 @@ const currentUserId = user ? JSON.parse(user).id : null;
   };
 
   if (loading) {
-    return <div className="loading">Đang tải bài viết...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (
     <div className="home-container">
       {/* <Navbar/> */}
 
-      <h2 className="home-title pop">🏡 Trang chủ</h2>
+      <h2 className="home-title pop">🏡 Home</h2>
 
       <CreatePost onPostCreated={handleNewPost} />
 
       {posts.length === 0 ? (
-        <p>Chưa có bài viết nào 😢</p>
+        <p>No post 😢</p>
       ) : (
         posts.map((post) => (
           <Post

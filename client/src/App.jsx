@@ -5,13 +5,12 @@ import Login from "./components/Login.jsx";
 import Home from "./pages/Home.jsx"
 import Profile from "./pages/Profile.jsx";
 import Navbar from "./components/Navbar.jsx";
+import "./App.css";
 
-// Kiểm tra token
 const isAuthenticated = () => {
   return !!localStorage.getItem("token");
 };
 
-// Component bảo vệ route
 const PrivateRoute = ({ children }) => {
   return isAuthenticated() ? children : <Navigate to="/login" />;
 };
@@ -64,7 +63,7 @@ const App = () => {
         <Route
           path="*"
           element={
-            isAuthenticated() ? <Navigate to="/home" /> : <Navigate to="/login" />
+            isAuthenticated() ? <Navigate to="/home" /> : <Navigate to="/register" />
           }
         />
       </Routes>

@@ -23,7 +23,6 @@ const Register = () => {
 
     if (response.ok) {
       alert("Create account successfully! 🎉");
-      // Chuyển hướng hoặc reset form:
       window.location.href = "/login";
       setForm({ name: "", email: "", password: "" });
     } else {
@@ -44,7 +43,7 @@ const Register = () => {
         <input
           type="text"
           name="name"
-          placeholder="name"
+          placeholder="Name..."
           value={form.name}
           onChange={handleChange}
           required
@@ -52,7 +51,7 @@ const Register = () => {
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Email..."
           value={form.email}
           onChange={handleChange}
           required
@@ -60,7 +59,7 @@ const Register = () => {
         <input
           type="password"
           name="password"
-          placeholder="passworf"
+          placeholder="Password..."
           value={form.password}
           onChange={handleChange}
           required

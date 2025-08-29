@@ -1,30 +1,48 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Toàn bộ body và html */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* màu nền */
+  font-family: sans-serif;
+  color: #fff;
+  box-sizing: border-box;
 }
 
+/* Root container full page */
+#root {
+  display: flex;
+  flex-direction: column; /* xếp dọc */
+  width: 100%;            /* full width */
+  min-height: 100vh;      /* full height màn hình */
+  padding: 0;             /* không padding để full screen */
+  margin: 0;
+  text-align: center;
+  background-color: #222;
+}
+
+/* Logo full width */
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  width: 100%;            /* trải dài full width */
+  max-width: none;
+  height: auto;
+  padding: 2rem 0;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Animation quay logo */
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,10 +51,31 @@
   }
 }
 
+/* Card full width */
 .card {
+  width: 100%;           /* full width */
+  max-width: 100%;       /* không giới hạn */
   padding: 2em;
+  background-color: #333;
+  border-radius: 0;      /* bo góc 0 để full width */
+  box-shadow: none;      /* bỏ shadow để full banner style */
+  margin: 0;             /* không có khoảng trống */
+  box-sizing: border-box;
 }
 
+/* Link nhỏ */
 .read-the-docs {
   color: #888;
+  text-decoration: none;
+}
+
+/* Responsive nhỏ */
+@media (max-width: 768px) {
+  .logo {
+    padding: 1rem 0;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
 }
